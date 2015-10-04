@@ -1,4 +1,6 @@
-[link to live version]
+[Play Snake!][snake link]
+
+[snake link]: http://www.lucasmccain.space/SNAKE
 
 # Snake!
 
