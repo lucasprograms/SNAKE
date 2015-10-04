@@ -10,7 +10,6 @@ html, body, ul, li {
   text-align: inherit;
 
   background: inherit;
-
 }
 
 body {
@@ -49,7 +48,6 @@ li {
 
 .grid {
   display: inline-block;
-  /*margin: 50px 0 0 0;*/
   background: #555;
 }
 
@@ -61,6 +59,7 @@ li {
 .apple-seg {
   background: #a00;
   border: 1px solid #000;
+  border-radius: 50%;
 }
 
 .play-game {
