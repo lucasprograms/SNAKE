@@ -7,20 +7,18 @@
   var View = SG.View = function () {
     this.$el = $(".grid");
 
-    this.board = new SG.Board(25);
+    this.board = new SG.Board(20);
     this.board.apple.makePos();
 
     this.setUpGrid();
     this.establishMoves();
-
-
   };
 
   View.prototype.playGame = function () {
     if ($(".modal").css("display") === "block") {
       $(".modal").css("display", "none");
 
-      this.board = new SG.Board(25);
+      this.board = new SG.Board(20);
       this.board.apple.makePos();
 
       this.setUpGrid();
@@ -65,11 +63,10 @@
 
         if (cell === "S") {
           $li.addClass("snake-seg");
-        }
-
-        if (cell === "A") {
+        } else if (cell === "A") {
           $li.addClass("apple-seg");
         }
+        
       }.bind(this));
     }.bind(this));
   };
@@ -85,6 +82,7 @@
       this.board.snake.grow(2);
     } else if (status === "hitBorder") {
       this.endGame();
+      return;
     }
 
     this.getListElement(_.first(cells), "snake");
@@ -108,8 +106,6 @@
       this.interval = null;
     } else {
       this.playGame();
-
-      // this.pause = true;
     }
   };
 
@@ -119,7 +115,6 @@
     $(".play-game").text("PLAY AGAIN");
     return;
   };
-
 
 })();
 
