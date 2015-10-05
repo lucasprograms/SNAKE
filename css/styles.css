@@ -1,0 +1,122 @@
+html, body, ul, li {
+  border: 0;
+  padding: 0;
+  outline: 0;
+  margin: 0;
+
+  text-decoration: inherit;
+  color: inherit;
+  font-family: inherit;
+  text-align: inherit;
+
+  background: inherit;
+}
+
+body {
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #333;
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
+  float: left;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+ul:first-child {
+  border-left: 2px solid black;
+}
+
+ul:last-child {
+  border-right: 2px solid black;
+}
+
+li {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #555;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.grid {
+  display: inline-block;
+  background: #555;
+}
+
+.snake-seg {
+  background: #090;
+  border: 1px solid #000;
+}
+
+.apple-seg {
+  background: #a00;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+.play-game {
+  width: 200px;
+  padding: 17px 0;
+  margin: 20px auto;
+
+  background: #0c0;
+  border: 1px solid #000;
+  position: relative;
+  z-index: 3;
+
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.play-game:hover {
+  background: #0a0;
+  color: #ddd;
+}
+
+.play-game:active {
+  box-shadow: 2px 2px 5px #000;
+}
+
+.modal-screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: #000;
+  opacity: 0.8;
+}
+
+.modal-form {
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  font-size: 60px;
+  position: fixed;
+  margin: 0 auto;
+  right: 0%;
+  left: 0%;
+  bottom: 70%;
+  z-index: 3;
+}
+
+.modal {
+  display: none;
+}
+
+.title {
+  margin: 50px 0 25px 0;
+  font-family: "Arial Black";
+  font-size: 60px;
+  color: #fff;
+}
