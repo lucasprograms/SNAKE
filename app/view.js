@@ -32,7 +32,7 @@
 
   View.prototype.establishMoves = function() {
     $(window).on("keydown", function(e) {
-      // e.preventDefault();
+      e.preventDefault();
       if (e.which === 38) {this.board.snake.turn("N");}
       if (e.which === 39) {this.board.snake.turn("E");}
       if (e.which === 40) {this.board.snake.turn("S");}
@@ -66,7 +66,7 @@
         } else if (cell === "A") {
           $li.addClass("apple-seg");
         }
-        
+
       }.bind(this));
     }.bind(this));
   };
