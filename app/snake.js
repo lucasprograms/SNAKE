@@ -12,6 +12,7 @@
     this.segments = [middle];
 
     this.board = board;
+    this.turnng = false;
   };
 
   Snake.prototype.move = function () {
@@ -24,12 +25,14 @@
       Snake.DIRS[this.currentDir][1];
 
     this.segments.unshift(this.segments.pop());
+    this.turning = false;
 
     return([firstSeg, lastSeg]);
+
   };
 
   Snake.prototype.turn = function (dir) {
-    if (this.segments.length > 1 &&
+    if (this.turning || this.segments.length > 1 &&
           ((this.currentDir === "N" && dir === "S") ||
            (this.currentDir === "E" && dir === "W") ||
            (this.currentDir === "S" && dir === "N") ||
@@ -39,6 +42,7 @@
 
         } else {
           this.currentDir = dir;
+          this.turning = true;
         }
   };
 

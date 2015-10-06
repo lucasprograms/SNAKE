@@ -120,3 +120,20 @@ li {
   font-size: 60px;
   color: #fff;
 }
+
+.instructions {
+  position: absolute;
+  margin: 0 10%;
+
+  color: #fff;
+}
+
+.instructions div {
+  position: static;
+  display: block;
+  margin: 20px 10px;
+  width: 200px;
+  clear: both;
+  text-align: left;
+  font-size: 20px;
+}
